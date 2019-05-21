@@ -1,0 +1,13 @@
+<h2 class="h head_center">Account Login</h2>
+<form action="/login/process" method="post">
+<input class="input_center" type="text" name="name" placeholder="Username" required>
+<br>
+<input class="input_center" type="password" name="password" placeholder="Password" required>
+<br>
+<center><input class="input_button_login" type="submit" value="Login"></center>
+</form>
+<% if session[:info]=='no_account' %>
+  <p class="head_center"><span>No such account. Please try again.</span></p>
+<% elsif session[:info]=='wrong_password' %>
+  <p class="head_center"><span>Wrong Password. Please try again.</span></p>
+<% end %>

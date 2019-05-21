@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="/style.css" rel="stylesheet" type="text/css">
+    <title><%= @title || 'Student Infomation System'%></title>
+  </head>
+  <body>
+    <div class="topnav">
+      <a class="active topnav_a_l" href="/">Home</a>
+      <a class="topnav_a_l" href="/student">Student</a>
+      <a class="topnav_a_l" href="/comment">Comment</a>
+      <a class="topnav_a_l" href="/video">Video</a>
+      <% if session[:name]==nil %>
+        <a class="active topnav_a_r" href="/login">Login</a>
+      <% else %>
+        <a class="active topnav_a_r" href="/logout">Logout</a>
+        <a class="topnav_a_r" disabled>Hello, <%= session[:name] %></a>
+        <a class="alert topnav_a_r" href="/delete_account">DELETE</a>
+      <% end %>
+      <a class="topnav_a_r" href="/signup">Sign Up</a>
+    </div>
+    <%= yield%>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<h2 class="h head_center">Student List</h2>
+<table>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Student ID</th>
+  </tr>
+  <% @students.each do |student| %>
+    <tr>
+      <td><%= student.firstname %></td>
+      <td><%= student.lastname %></td>
+      <td><a href="/student/<%=student.id%>"><%= student.sid %></a></td>
+    </tr>
+  <% end %>
+</table>
+<br>
+<% if session[:name] %>
+<button class="button_normal" onclick="window.location.href='/student/add';">Add</button>
+<% else %>
+  <p class="head_center"><span>Please login to add new student</span></p>
+<% end %>

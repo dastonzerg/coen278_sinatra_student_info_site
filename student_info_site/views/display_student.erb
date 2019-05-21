@@ -1,0 +1,17 @@
+<h2 class="h head_center"><%=@firstname+' '+@lastname%></h2>
+<h4 class="head_center">Firstname</h4>
+<p class="head_center"><%=@firstname%></p>
+<h4 class="head_center">Lastname</h4>
+<p class="head_center"><%=@lastname%></p>
+<h4 class="head_center">Student ID</h4>
+<p class="head_center"><%=@sid%></p>
+<h4 class="head_center">Birthday</h4>
+<p class="head_center"><%=@birthday%></p>
+<h4 class="head_center">Address</h4>
+<p class="head_center"><%=@address%></p>
+<% if session[:name] %>
+<button class="button_normal button_center" onclick="window.location.href='/student/edit/<%=@id%>';">Edit</button>
+<button class="button_normal button_center" onclick="window.location.href='/student/delete/<%=@id%>';">Delete</button>
+<% else %>
+  <p class="head_center"><span>Please login to edit the student</span></p>
+<% end %>

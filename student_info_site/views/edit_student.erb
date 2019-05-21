@@ -1,0 +1,21 @@
+<h2>Edit Student</h2>
+<h4><%=@firstname+' '+@lastname%></h4>
+<form action="/student/form/edit" method="post">
+  Student ID:<br>
+  <input type="text" name="sid" value="<%=@sid%>" placeholder="Student ID (required)" required>
+  <br>
+  First name:<br>
+  <input type="text" name="firstname" value="<%=@firstname%>" placeholder="First Name (required)" required>
+  <br>
+  Last name:<br>
+  <input type="text" name="lastname" value="<%=@lastname%>" placeholder="Last Name (required)" required>
+  <br>
+  Birthday:<br>
+  <input type="date" name="birthday" value="<%=@birthday%>" required>
+  <br>
+  Address:<br>
+  <textarea name="address" rows="3" cols="30" placeholder="Address"><%=@address%></textarea>
+  <br><br>
+  <input type="hidden" name="id" value="<%=@id%>">
+  <input class="button_normal" type="submit" value="Submit">
+</form>

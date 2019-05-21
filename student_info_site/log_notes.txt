@@ -1,0 +1,16 @@
+(base) dastonzergs-MacBook-Pro:~ dastonzerg$ brew untap adoptopenjdk/openjdk
+Untapping adoptopenjdk/openjdk...
+Untapped 14 casks (68 files, 69.6KB).
+(base) dastonzergs-MacBook-Pro:~ dastonzerg$ brew untap caskroom/versions
+Untapping caskroom/versions...
+
+gem query --local
+
+(base) dastonzergs-MacBook-Pro:student_info_site dastonzerg$ git config user.name "weipeng_zheng"
+(base) dastonzergs-MacBook-Pro:student_info_site dastonzerg$ git config user.email "wzheng2@scu.edu"
+
+heroku create student-info-site
+
+heroku git:remote -a weipeng-mtg
+
+https://weipeng-mtg.herokuapp.com/
